@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-image: linear-gradient(130deg, red, blue);
+    list-style-position: outside;
+    width: 450px;
+}
+
+
+/* ol li::marker {
+    color: red;
+    content: counter(example);
+} */
+
+ol {
+    counter-reset: example 0;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+li {
+    counter-increment: example 2;
+    width: 350px;
+    background-color: rgb(70, 167, 241);
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+li::after {
+    content: counter(example);
+    color: rgba(255, 255, 255, 0.737);
+    font-size: 4rem;
+    position: absolute;
+    right: 15px;
+    top: -10px;
+}
+
+p {
+    font-size: 16px;
+}
